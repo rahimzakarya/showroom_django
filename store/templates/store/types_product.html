@@ -1,0 +1,25 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+<h3 class="Title-product">products</h3>
+<div class="cards-flex">
+    {% for product in data %}
+    <a href="#">
+        <div class="product_card">
+            <div class="product_card_image">
+
+            </div>
+            <div class="product_card_information">
+                <h1 class="product_card_title">{{product.name}} </h1>
+                <h5 class="product_card_price">{{product.price}} <span class="product_card_price_unit">{{product.price_unit}}</span></h5>
+                <h5 class="product_card_description_title">description :</h5>
+                <p class="product_card_description">{{product.description}}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock content %}

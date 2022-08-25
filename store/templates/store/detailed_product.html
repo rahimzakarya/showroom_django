@@ -1,0 +1,52 @@
+<!-- not used -->
+
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/detailed_product_style.css'%}">
+<main class="container-product-view">
+    <div class="product_view_container">
+        <div class="product_view_image">
+            <div class="product-tumb">
+                <img src="{% static 'images/engrais.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="product_view_info">
+            <p class="product_view_info_type">{{product.type_product}}</p>
+            <h3 class="product_view_info_name">{{product.name}}</h3>
+            <h5 class="product_view_info_price">{{product.price}}<span class="price_unit">{{product.price_unit}}</span></h5>
+			<hr>
+            <p class="product_view_info_description">{{product.description}}
+            </p>
+        </div>
+    </div>
+</main>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/products_style.css' %}">
+    <div class="cards-flex">
+        {% for prod in product_sim %}
+        {% if prod.product_type == product.product_type %}
+        <a href="">
+            <div class="product-card" data-aos="fade-up"
+            data-aos-anchor-placement="top-center">
+                <div class="product-tumb">
+                    <img src="{% static 'images/engrais.jpg' %}" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">{{product.type_product}}</span>
+                    <h4><a href="">{{product.name}}</a></h4>
+                    <p class="description-product">{{product.description}}</p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small></small>{{product.price}} <small>{{product.price_unit}}</small></div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+{% endblock content %}

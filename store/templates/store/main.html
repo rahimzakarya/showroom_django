@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing_style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Lounis Agriculture</title>
+</head>
+<body>
+
+  <nav class="navbar" >
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <img src="{% static 'images/LOGO.svg' %}" class="logo" alt="">
+    </div>
+</nav>
+
+
+      <div>
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+
+<!-- footer start -->
+<div class="footer-container">
+  <div class="logo-adress">
+    <div class="logo-img">
+    <img src="{% static 'images/LOGO.svg' %}" alt="">
+  </div>
+    <p class="adresse">175 rue Didouche Moura Didouche Moura Didouche Mourad,  Alger Centre, Algeria</p>
+  </div>
+  <div class="getintouch">
+    <p class="getintotouch_title">Get Into Touch</p>
+    <div class="getintotouch_item">
+      <img src="{% static 'images/clock.svg' %}" alt="">
+      <p>Weekday : 8h00 - 17h00</p>
+    </div>
+    <div class="getintotouch_item">
+      <img src="{% static 'images/mail.svg' %}" alt="">
+      <p>xxxx@gmail.com</p>
+    </div>
+    <div class="getintotouch_item">
+      <img src="{% static 'images/phone.svg' %}" alt="">
+      <p>+213 xxxxxxxxx</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- footer end -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/products_style.css' %}">
+<h3 class="Title-product">products</h3>
+<div class="cards-flex">
+    {% for product in products %}
+    {% if product.product_type == product.product_type %}
+    <a href="">
+        <div class="product-card" data-aos="fade-up"
+        data-aos-anchor-placement="top-center">
+            <div class="product-tumb">
+                <img src="{% static 'images/engrais.jpg' %}" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">{{product.type_product}}</span>
+                <h4><a href="">{{product.name}}</a></h4>
+                <p class="description-product">{{product.description}}</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small></small>{{product.price}} <small>{{product.price_unit}}</small></div>
+                    <div class="product-links">
+                        <a href=""><i class="fa fa-heart"></i></a>
+                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock content %}

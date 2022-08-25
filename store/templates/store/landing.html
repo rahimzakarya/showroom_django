@@ -1,0 +1,41 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+<!-- hero start -->
+
+<div class="hero-container" style="background-image: url({% static 'images/hero-bg.jpg' %}) ;    background-repeat: no-repeat;
+background-size: cover;">
+    <p class="hero-main-text">
+        Lounis Agriculture
+    </p>
+    <p class="hero-slugan-text">
+        Nous avons des solutions pour les besoins de l'agriculture
+    </p>
+</div>
+
+<!-- hero end -->
+
+<h3 class="Title-product">our products</h3>
+<div class="cards-flex">
+    {% for product in products_type %}
+    <a href="">
+        <div class="product-card" data-aos="fade-up"
+        data-aos-anchor-placement="top-center"> 
+            <div class="product-tumb">
+                <img src="{% static 'images/engrais.jpg' %}" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">{{product.type_product}}</span>
+                <h4><a href="{% url 'products' %}">{{product.name}}</a></h4>
+                <p class="description-product">{{product.description}}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
+{% endblock content %}
