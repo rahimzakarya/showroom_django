@@ -33,20 +33,19 @@
                     <img src="{% static 'images/engrais.jpg' %}" alt="">
                 </div>
                 <div class="product-details">
-                    <span class="product-catagory">{{product.type_product}}</span>
-                    <h4><a href="">{{product.name}}</a></h4>
-                    <p class="description-product">{{product.description}}</p>
+                    <span class="product-catagory">{{prod.type_product}}</span>
+                    <h4><a href="">{{prod.name}}</a></h4>
+                    <p class="description-product">{{prod.description}}</p>
                     <div class="product-bottom-details">
-                        <div class="product-price"><small></small>{{product.price}} <small>{{product.price_unit}}</small></div>
-                        <div class="product-links">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href=""><i class="fa fa-shopping-cart"></i></a>
-                        </div>
+                        <div class="product-price"><small></small>{{prod.price}} <small>{{prod.price_unit}}</small></div>
                     </div>
                 </div>
             </div>
         </a>
         {% endif %}
+        {% endfor %}
+        {% for pro in sub %}
+        {{pro.name}}
         {% endfor %}
     </div>
 {% endblock content %}

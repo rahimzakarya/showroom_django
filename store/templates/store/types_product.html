@@ -3,20 +3,23 @@
 
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/products_style.css' %}">
 <h3 class="Title-product">products</h3>
 <div class="cards-flex">
-    {% for product in data %}
-    <a href="#">
-        <div class="product_card">
-            <div class="product_card_image">
-
+    {% for product in prods %}
+    <a href="{{product.get_absolute_url}}">
+        <div class="product-card" data-aos="fade-up"
+        data-aos-anchor-placement="top-center">
+            <div class="product-tumb">
+                <img src="{{ product.image.url }}" alt="product image">
             </div>
-            <div class="product_card_information">
-                <h1 class="product_card_title">{{product.name}} </h1>
-                <h5 class="product_card_price">{{product.price}} <span class="product_card_price_unit">{{product.price_unit}}</span></h5>
-                <h5 class="product_card_description_title">description :</h5>
-                <p class="product_card_description">{{product.description}}</p>
+            <div class="product-details">
+                <span class="product-catagory">{{product.type_product}}</span>
+                <h4><a href="{{product.get_absolute_url}}">{{product.name}}</a></h4>
+                <p class="description-product">{{product.description}}</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small></small>{{product.price}} <small>{{product.price_unit}}</small></div>
+                </div>
             </div>
         </div>
     </a>

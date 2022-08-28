@@ -21,17 +21,16 @@ background-size: cover;">
 
 <h3 class="Title-product">our products</h3>
 <div class="cards-flex">
-    {% for product in products_type %}
-    <a href="">
+    {% for type in products_type %}
+    <a href="{{type.get_absolute_url}}">
         <div class="product-card" data-aos="fade-up"
         data-aos-anchor-placement="top-center"> 
             <div class="product-tumb">
                 <img src="{% static 'images/engrais.jpg' %}" alt="">
             </div>
             <div class="product-details">
-                <span class="product-catagory">{{product.type_product}}</span>
-                <h4><a href="{% url 'products' %}">{{product.name}}</a></h4>
-                <p class="description-product">{{product.description}}</p>
+                <h4><a href="{{type.get_absolute_url}}">{{type.name}}</a></h4>
+                <p class="description-product">{{type.description}}</p>
             </div>
         </div>
     </a>
