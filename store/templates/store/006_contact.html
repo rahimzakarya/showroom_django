@@ -1,0 +1,24 @@
+{% extends 'store/000_main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/006_contact.css'%}">
+<div class="contact-container">
+    <h1 class="contact-title"> Contact Us</h1>
+    <div class="contact-info-container">
+        <div class="contact-card">
+            <img src="{% static 'images/phone.svg' %}" alt="phone" class="contact-icon">
+            <p >
+                +213 xxxxxxxxxx
+            </p>
+        </div>
+        <div class="contact-card">
+            <img src="{% static 'images/mail.svg' %}" alt="phone" class="contact-icon">
+            <p >
+                xxxxxxx@gmail.com
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

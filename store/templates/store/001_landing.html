@@ -1,10 +1,10 @@
-{% extends 'store/main.html' %}
+{% extends 'store/000_main.html' %}
 {% load static %}
 
 {% block content %}
 
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/001_landing.css' %}">
 <!-- hero start -->
 
 <div class="hero-container" style="background-image: url({% static 'images/hero-bg.jpg' %}) ;    background-repeat: no-repeat;
@@ -21,10 +21,12 @@ background-size: cover;">
 
 <h3 class="Title-product">our products</h3>
 <div class="cards-flex">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/003_products.css' %}">
     {% for type in products_type %}
     <a href="{{type.get_absolute_url}}">
-        <div class="product-card" data-aos="fade-up"
+        <div data-aos="fade-up"
         data-aos-anchor-placement="top-center"> 
+        <div class="product-card">
             <div class="product-tumb">
                 <img src="{% static 'images/engrais.jpg' %}" alt="">
             </div>
@@ -33,6 +35,7 @@ background-size: cover;">
                 <p class="description-product">{{type.description}}</p>
             </div>
         </div>
+    </div>
     </a>
     {% endfor %}
 

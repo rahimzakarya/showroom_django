@@ -23,6 +23,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .product_view_image {
@@ -39,7 +40,7 @@ hr {
 }
 
 .product_view_info {
-    width: 50%;
+    width: 40%;
     margin: 20px 0;
 }
 
@@ -91,9 +92,8 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
     padding: 0px;
-    background: #ffffff;
+    width: 80vw;
 }
 
 .product-tumb img {
@@ -101,3 +101,87 @@ hr {
     max-height: 100%;
 }
 
+
+.options-area {
+    margin: 60px;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.options-area h3 {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.options-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 50vw;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.option-card {
+    padding: 20px;
+    width: 250px;
+    word-wrap: break-word;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.229);
+    margin: 20px 0;
+    text-align: left;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: normal;
+
+}
+.option-card:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.option-card p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    align-self: auto;
+    height: auto;
+}
+
+.pricing { 
+    margin-top: auto;
+}
+
+span.price {
+    font-size: 24px;
+    color:  #00A559;
+    font-weight: 600;
+}
+
+span.price-color {
+    color:  #00A559;
+}
+.price-info {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+@media (max-width:650px) {
+    .product-tumb img {
+        max-width: 80vw;
+        max-height: fit-content;
+        width: 80vw;
+        height: auto;
+    }
+}
+
+@media (min-width:900px) {
+    .product_view_info {
+        padding-left: 40px;
+    }
+}

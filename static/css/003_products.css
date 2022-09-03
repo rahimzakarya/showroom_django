@@ -1,59 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap');
 
 body {
     background-color: rgba(0, 165, 90, 0.10);
 }
 
-.hero-container {
-    width: 100vw;
-    overflow-x: hidden;
-    height: 100vh;
-
-    align-items: center;
-    text-align: center;
-    vertical-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-shadow: 2px 2px 8px rgba(0, 165, 91, 0.707);
-}
-
-.hero-main-text {
-    font-size: 70px;
-    font-weight: 700;
-
-    color: white;
-}
-
-.hero-slugan-text {
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    /* font-family: 'Twinkle Star', cursive; */
-
-}
-
 .Title-product {
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 600;
     text-transform: uppercase;
+    margin: 10px auto;
+    margin: 20px 0 0;
     text-align: center;
-    margin: 20px 0 40px;
 }
 
-.hero-container {
-    width: 100vw;
-    height: 90vh;
+a {
+    text-decoration: none;
+    color: black;
+    display: inline;
 }
-.suggestion-container{
-    width: 100vw;
-    height: 100vh;
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+a:hover {
+    text-decoration: none;
+    color: black;
+}
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
 }
 
 .cards-flex {
@@ -79,8 +64,8 @@ body {
 
 .product-card:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 4px #0000006d;
-} 
+    transition: all 0.2s;
+}
 
 .badge {
     position: absolute;
@@ -91,7 +76,7 @@ body {
     font-weight: 700;
     background: rgb(255, 0, 0);
     color: #fff;
-    padding: 3px 10px 0px 10px;
+    padding: 3px 10px;
 }
 
 .product-tumb {
@@ -146,12 +131,11 @@ body {
     overflow: hidden;
     border-top: 1px solid #eee;
     padding-top: 20px;
-    text-align: center;
 }
 
 .product-bottom-details div {
     float: left;
-    width: 50%;
+    width: 100%;
 }
 
 .product-price {
@@ -197,12 +181,6 @@ body {
 }
 
 @media (max-width: 991.98px) {
-    .hero-main-text  {
-        font-size: 50px;
-    }
-    .hero-slugan-text {
-
-    } 
     .description-product {
         width: 70vw;
         -webkit-line-clamp: 4;
@@ -212,10 +190,3 @@ body {
         width: 80vw;
     }
 }
-
-.view {
-    text-decoration: underline;
-    align-items:  center;
-    color: #363636;
-    font-size: 75px;
-}   

@@ -1,15 +1,16 @@
-{% extends 'store/main.html' %}
+{% extends 'store/000_main.html' %}
 {% load static %}
 
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/products_style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/003_products.css' %}">
 <h3 class="Title-product">products</h3>
 <div class="cards-flex">
-    {% for product in prods %}
+    {% for product in products %}
     <a href="{{product.get_absolute_url}}">
-        <div class="product-card" data-aos="fade-up"
+        <div data-aos="fade-up"
         data-aos-anchor-placement="top-center">
+        <div class="product-card">
             <div class="product-tumb">
                 <img src="{{ product.image.url }}" alt="product image">
             </div>
@@ -22,6 +23,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </a>
     {% endfor %}
 </div>

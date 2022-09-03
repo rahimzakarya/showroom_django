@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+::selection {
+    color: white;
+    background: #00A559;
+}
+
+
 body {
+    scroll-behavior: smooth;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 165, 90, 0.10) !important;
     font-family: 'Poppins', sans-serif !important;
     background-color: rgba(0, 165, 90, 0.10);
+    width: 100vw;
 }
 
 body {
@@ -14,7 +22,8 @@ body {
 }
 
   .navbar {
-    background:transparent;
+    background:white;
+    height: 80px;
   }
   
   .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus{
@@ -103,10 +112,9 @@ body {
 
 .navbar{
     box-shadow: 0px 5px 10px 0px #aaa;
-    position: fixed;
     width: 100%;
 
-    background: #fff;
+    /* background: #fff; */
     color: #000;
     opacity: 0.85;
     z-index: 100;
@@ -118,7 +126,7 @@ body {
 .navbar-container{
     display: flex;
     justify-content: space-between;
-    height: 64px;
+    height: 80px;
     align-items: center;
 }
 
@@ -134,21 +142,29 @@ body {
 }
 
 .navbar a{
-    color: #444;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
+    margin: 0 10px;
     transition: color 0.3s ease-in-out;
 }
 
 .navbar a:hover{
-    color: #117964;
+    color: #00a558;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+
+.navbar .contact-button a {
+    color: black;
 }
 
 @media (max-width: 768px){
     .navbar{
         opacity: 0.95;
+        position: relative;
+        z-index: 99;
     }
-
     .navbar-container input[type="checkbox"],
     .navbar-container .hamburger-lines{
         display: block;
@@ -231,10 +247,9 @@ body {
 
     .logo{
         position: absolute;
-        top: 0 !important;
         right: 15px;
         font-size: 2.5rem;
-        width: 80px;
+        width: 90px;
     }
 
     .navbar-container input[type="checkbox"]:checked ~ .menu-items{
@@ -259,4 +274,18 @@ body {
     .navbar-container input[type="checkbox"]:checked ~ .logo{
         display: none;
     }
+}
+
+.contact-button {
+    background-color: transparent;
+    border: solid #00a558;
+    padding: 0px 5px;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.contact-button {
+    box-shadow: 0px 0px 20px #00A559;
+    transition: all 0.5s;
 }

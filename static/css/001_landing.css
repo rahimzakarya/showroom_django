@@ -1,43 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap');
 
 body {
     background-color: rgba(0, 165, 90, 0.10);
 }
 
-.Title-product {
-    font-size: 3vw;
-    font-weight: 600;
-    text-transform: uppercase;
+.hero-container {
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+
+    align-items: center;
     text-align: center;
-    margin: 20px 0 0;
+    vertical-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 8px rgba(0, 165, 91, 0.707);
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    display: inline;
-}
-a:hover {
-    text-decoration: none;
-    color: black;
+.hero-main-text {
+    font-size: 70px;
+    font-weight: 700;
+
+    color: white;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-*
-{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.hero-slugan-text {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    /* font-family: 'Twinkle Star', cursive; */
+
 }
 
+.Title-product {
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto !important;
 
-body
-{
-    font-family: 'Roboto', sans-serif;
 }
-a
-{
-    text-decoration: none;
+
+.hero-container {
+    width: 100vw;
+    height: 90vh;
+}
+.suggestion-container{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .cards-flex {
@@ -59,10 +76,14 @@ a
     margin: 50px auto;
     background: #fafafa;
     border-radius: 20px;
+    transition: all 0.2s;
 }
 
 .product-card:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: all 0.2s;
+    box-shadow: 0px 0px 20px #0000006d;
+    border-radius: 20px;
 }
 
 .badge {
@@ -74,7 +95,7 @@ a
     font-weight: 700;
     background: rgb(255, 0, 0);
     color: #fff;
-    padding: 3px 10px;
+    padding: 3px 10px 0px 10px;
 }
 
 .product-tumb {
@@ -129,11 +150,12 @@ a
     overflow: hidden;
     border-top: 1px solid #eee;
     padding-top: 20px;
+    text-align: center;
 }
 
 .product-bottom-details div {
     float: left;
-    width: 100%;
+    width: 50%;
 }
 
 .product-price {
@@ -179,6 +201,12 @@ a
 }
 
 @media (max-width: 991.98px) {
+    .hero-main-text  {
+        font-size: 50px;
+    }
+    .hero-slugan-text {
+
+    } 
     .description-product {
         width: 70vw;
         -webkit-line-clamp: 4;
@@ -187,4 +215,11 @@ a
     .product-card  {
         width: 80vw;
     }
+}
+
+.view {
+    text-decoration: underline;
+    align-items:  center;
+    color: #363636;
+    font-size: 75px;
 }

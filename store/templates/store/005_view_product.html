@@ -1,0 +1,42 @@
+{% extends 'store/000_main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/005_view_product.css'%}">
+<main class="container-product-view">
+    <div class="product_view_container">
+        <div class="product_view_image">
+            <div class="product-tumb">
+                <img src="{{ product.image.url }}" alt="">
+            </div>
+        </div>
+
+        <div class="product_view_info">
+            <p class="product_view_info_type">{{product.type_product}}</p>
+            <h3 class="product_view_info_name">{{product.name}}</h3>
+            <p class="product_view_info_type">{{product.brand}}</p>
+            <h5 class="product_view_info_price"><span class="price-color">{{product.price}}</span> <span class="price_unit">{{product.price_unit}}</span></h5>
+			<hr>
+            <p class="product_view_info_description">{{product.description}}
+            </p>
+        </div>
+        {% if product.options_dispo %}
+        <div class="options-area">
+            <h3>Options :</h3>
+            <div class="options-flex">
+                    {% for option in product_options %}
+                    <div class="option-card">
+                    <p class="specs">{{option.name}}</p>
+                    <div class="pricing">
+                    <hr>
+                    <p class="price-info"><span class="price">{{option.price}}</span> {{option.price_unit}}</p>
+                    </div>
+                </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </div>
+    {% endif %}
+</main>
+
+    </div>
+{% endblock content %}
