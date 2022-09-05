@@ -46,11 +46,10 @@ a
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    flex-basis: 80vw;
+    flex-basis: 75vw;
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .product-card {
@@ -180,6 +179,14 @@ a
     overflow-y: hidden;
 }
 
+.Title-product-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 @media (max-width: 991.98px) {
     .description-product {
         width: 70vw;
@@ -189,4 +196,10 @@ a
     .product-card  {
         width: 80vw;
     }
+
+    .Title-product-title {
+        width: 80%;
+    }
 }
+
+

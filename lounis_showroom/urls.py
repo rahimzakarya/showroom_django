@@ -39,5 +39,6 @@ urlpatterns += [
 ]
 
 handler404= 'store.views.handle_not_found'
+handler500= 'store.views.handle_500'
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

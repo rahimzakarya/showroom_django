@@ -5,7 +5,8 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/003_products.css' %}">
 <title>Lounis Agriculture | type</title>
-<h3 class="Title-product">products</h3>
+<h3 class="Title-product">{{type_prod.name}}</h3>
+<h3 class="Title-product-title">{{type_prod.description}}</h3>
 <div class="cards-flex">
     {% for product in prods %}
     <a href="{{product.get_absolute_url}}">

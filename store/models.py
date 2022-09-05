@@ -16,12 +16,12 @@ class product_type(models.Model):
 
 class products(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
-    brand = models.CharField(max_length=100, null=False, blank=False, default='')
+    brand = models.CharField(max_length=100, null=True, blank=True, default=' ')
     type_product = models.ForeignKey(product_type, on_delete=models.CASCADE, null=True)
     image = models.ImageField(null=True)
     price = models.FloatField()
     price_unit = models.CharField(default='da/pieces',  max_length=20)
-    description = models.CharField(max_length=800, null=True, blank=True)
+    description = models.TextField(max_length=800, null=True, blank=True)
     options_dispo = models.BooleanField(default=False)
     def __str__(self):
         return str(self.name)
@@ -34,7 +34,7 @@ class options_product(models.Model):
     name = models.CharField(max_length=100, null=True, blank=False)
     product = models.ForeignKey(products, on_delete=models.CASCADE, null=True)
     price = models.FloatField()
-    price_unit = models.CharField(default='da/pieces',  max_length=20)
-    description = models.CharField(max_length=800, null=True, blank=True)
+    price_unit = models.TextField(default='da/pieces',  max_length=20)
+    description = models.TextField(max_length=800, null=True, blank=True)
     def __str__(self):
         return str(self.name)

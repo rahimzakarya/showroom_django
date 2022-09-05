@@ -33,7 +33,7 @@
         </div>
         <ul class="menu-items">
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="{% url 'products' %}">Produits</a></li>
             <li class="contact-button"><a href="/contact/">Contact</a></li>
         </ul>
         <a href="{% url 'home' %}"><img src="{% static 'images/LOGO.svg' %}" class="logo" alt="" width="70"></a>
@@ -53,21 +53,25 @@
     <div class="logo-img">
     <img src="{% static 'images/LOGO.svg' %}" alt="" width="120px">
   </div>
-    <p class="adresse">175 rue Didouche Moura Didouche Moura Didouche Mourad,  Alger Centre, Algeria</p>
+    <p class="adresse">N°76 Snfeta Zabouja 02014 Chlef - Algérie</p>
   </div>
   <div class="getintouch">
     <p class="getintotouch_title">Get Into Touch</p>
     <div class="getintotouch_item">
       <img src="{% static 'images/clock.svg' %}" alt="">
-      <p>Weekday : 8h00 - 17h00</p>
+        <p class="text-footer">Weekday : 8h00 - 17h00 <br></p>
     </div>
     <div class="getintotouch_item">
       <img src="{% static 'images/mail.svg' %}" alt="">
-      <p>xxxx@gmail.com</p>
+      <a href="mailto:rfdfd@gmail.com">
+      <p class="text-footer">xxxx@gmail.com</p>
+      </a>
     </div>
     <div class="getintotouch_item">
       <img src="{% static 'images/phone.svg' %}" alt="">
-      <p>+213 xxxxxxxxx</p>
+      <a href="tel:027752261">
+        <p class="text-footer">027 75 22 61</p>
+      </a>
     </div>
   </div>
 </div>

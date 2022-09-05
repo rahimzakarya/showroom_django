@@ -16,7 +16,7 @@
             <p class="product_view_info_type">{{product.brand}}</p>
             <h5 class="product_view_info_price"><span class="price-color">{{product.price}}</span> <span class="price_unit">{{product.price_unit}}</span></h5>
 			<hr>
-            <p class="product_view_info_description">{{product.description}}
+            <p class="product_view_info_description">{{product.description|linebreaks }}
             </p>
         </div>
         {% if product.options_dispo %}
@@ -27,6 +27,7 @@
                     <div class="option-card">
                     <p class="specs">{{option.name}}</p>
                     <div class="pricing">
+                    {{option.description|linebreaks}}
                     <hr>
                     <p class="price-info"><span class="price">{{option.price}}</span> {{option.price_unit}}</p>
                     </div>

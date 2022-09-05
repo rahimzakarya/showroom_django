@@ -80,7 +80,8 @@ hr {
         height: 250px;
     }
     .product_view_info {
-        width: 80%;
+        width: 90%;
+        margin-top: 50%;
     }
     .product_image {
         width: 70vw;
@@ -138,6 +139,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-self: normal;
+    text-align: center;
 
 }
 .option-card:hover {
@@ -154,8 +156,12 @@ hr {
 
 .pricing { 
     margin-top: auto;
-}
 
+}
+.pricing p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
 span.price {
     font-size: 24px;
     color:  #00A559;

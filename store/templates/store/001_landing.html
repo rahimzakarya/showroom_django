@@ -19,7 +19,7 @@ background-size: cover;">
 
 <!-- hero end -->
 
-<h3 class="Title-product">our products</h3>
+<h3 class="Title-product">NOS PRODUITS</h3>
 <div class="cards-flex">
     <link rel="stylesheet" type="text/css" href="{% static 'css/003_products.css' %}">
     {% for type in products_type %}
@@ -28,7 +28,7 @@ background-size: cover;">
         data-aos-anchor-placement="top-center"> 
         <div class="product-card">
             <div class="product-tumb">
-                <img src="{% static 'images/engrais.jpg' %}" alt="">
+                <img src="{{ type.image.url }}">
             </div>
             <div class="product-details">
                 <h4><a href="{{type.get_absolute_url}}">{{type.name}}</a></h4>
