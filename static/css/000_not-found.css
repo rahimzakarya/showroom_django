@@ -1,0 +1,35 @@
+.container_notfound {
+    width: 100vw;
+    height: fit-content;
+    min-height: 60vh;
+    text-align: center;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+}
+
+.title-404 {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.number {
+    font-size: 200%;
+    color: rgb(21, 12, 12) ;
+    text-shadow: 2px 2px 2px #00A559;
+}
+
+.text {
+    font-size: 1.5rem;
+    margin: 20px 0 40px;
+}
+.return-home {
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: solid rgb(46, 45, 45) 1px;
+    color: black;
+    font-weight: 600;
+    background-color: white;
+}

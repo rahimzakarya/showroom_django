@@ -1,0 +1,12 @@
+{% extends 'store/000_main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/000_not-found.css' %}">
+<div class="container_notfound">
+    <p class="title-404"><span class="number"> 404 </span><span class="title-404-Text">Page non trouvée</span></p>
+
+    <p class="text">Désolé, nous ne pouvons pas trouver cette page! Ne vous inquiétez pas cependant, tout le reste fonctionne TOUJOURS IMPRESSIONNANT!</p>
+
+    <a class="return-home" href="/home/">Back Home</a>
+</div>
+{% endblock content %}

@@ -1,0 +1,45 @@
+.footer-container {
+    width: 100vw;
+    padding: 50px;
+    background-color: #363636;
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+}
+
+.logo-adress {
+    width: 500px;
+}
+
+.logo-adress .logo-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+
+.getintouch {
+    width: 500px;
+}
+
+.getintotouch_title {
+    font-weight: 600;
+    text-align: left;
+}
+
+.getintotouch_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.getintotouch_item img {
+    margin-right: 20px;
+}

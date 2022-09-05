@@ -34,3 +34,8 @@ def contact(request):
     context = {}
     return render(request, 'store/006_contact.html', context)
 
+# 000
+def handle_not_found(request, exception):
+    context = {}
+    return render(request, 'store/000_not-found.html', context)
+

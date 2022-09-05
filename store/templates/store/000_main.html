@@ -6,10 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/000_main.css' %}">
+
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/001_landing.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/000_main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/000_footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/000_navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/001_landing.css' %}">
+
+    <!-- page naming -->
     <title>Lounis Agriculture</title>
     <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %} ">
 </head>
@@ -28,7 +36,7 @@
             <li><a href="{% url 'products' %}">Products</a></li>
             <li class="contact-button"><a href="/contact/">Contact</a></li>
         </ul>
-        <img src="{% static 'images/LOGO.svg' %}" class="logo" alt="">
+        <a href="{% url 'home' %}"><img src="{% static 'images/LOGO.svg' %}" class="logo" alt="" width="70"></a>
     </div>
 </nav>
 
@@ -43,7 +51,7 @@
 <div class="footer-container">
   <div class="logo-adress">
     <div class="logo-img">
-    <img src="{% static 'images/LOGO.svg' %}" alt="">
+    <img src="{% static 'images/LOGO.svg' %}" alt="" width="120px">
   </div>
     <p class="adresse">175 rue Didouche Moura Didouche Moura Didouche Mourad,  Alger Centre, Algeria</p>
   </div>
